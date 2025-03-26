@@ -4,13 +4,13 @@
 import os
 import chainlit as cl
 import requests
-from langchain.llms import OpenAI
+from langchain_openai import ChatOpenAI
 from docx import Document
 from bs4 import BeautifulSoup
 from config import OPENAI_API_KEY
 
 # Initialize GPT-4o-mini with LangChain
-llm = OpenAI(api_key=OPENAI_API_KEY, model_name="gpt-4o-mini")
+llm = ChatOpenAI(api_key=OPENAI_API_KEY, model_name="gpt-4o-mini")
 
 # ---- Utility Functions ----
 
