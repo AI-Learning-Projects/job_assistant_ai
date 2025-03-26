@@ -1,0 +1,67 @@
+Sr. Data Scientist - Machine Learning - Products
+
+Your work days are brighter here.
+
+At Workday, it all began with a conversation over breakfast. When our founders met at a sunny California diner, they came up with an idea to revolutionize the enterprise software market. And when we began to rise, one thing that really set us apart was our culture. A culture which was driven by our value of putting our people first. And ever since, the happiness, development, and contribution of every Workmate is central to who we are. Our Workmates believe a healthy employee-centric, collaborative culture is the essential mix of ingredients for success in business. That’s why we look after our people, communities and the planet while still being profitable. Feel encouraged to shine, however that manifests: you don’t need to hide who you are. You can feel the energy and the passion, it's what makes us unique. Inspired to make a brighter work day for all and transform with us to the next stage of our growth journey? Bring your brightest version of you and have a brighter work day here.
+
+At Workday, we value our candidates’ privacy and data security.  Workday will never ask candidates to apply to jobs through websites that are not Workday Careers. 
+
+  
+
+Please be aware of sites that may ask for you to input your data in connection with a job posting that appears to be from Workday but is not.
+
+  
+
+In addition, Workday will never ask candidates to pay a recruiting fee, or pay for consulting or coaching services, in order to apply for a job at Workday.
+
+About the Team
+
+Workforce ML team charter is to “Enable the Future of Work with AI and ML”.  We believe if you do what you love, you’ll love what you do. There’s a lot to love at Workday. You will be part of a global, high-growth product team to develop the next generation of smart applications used by over 60 million users, representing about ~450 billion transactions a year. You will solve complex business and user interaction problems by improving ML. We operate and function like a startup with a high degree of autonomy and strong sense of total ownership.
+About the Role
+
+The team is seeking someone with a strong product mentality and opinions around how ML can drive a better customer experience. You will play a key role in building and deploying data-driven ML solutions that drive smarter products. You will effectively engage with data scientists, ML engineers, PMs and architects in requirements elaboration and drive technical solutions. You must have a mentality of continuous improvement, passion for quality, scale, and security.
+
+About You
+
+What you will do:
+Develop, train, and test ML models to use to address business problems
+
+Undertake statistical analysis of the results produced and refine the model where requirer
+
+Experience with data wrangling, preprocessing, and feature engineering, especially with noisy data
+
+Independently identify ML opportunities and propose solutions to leadership
+
+Work with engineering teams to implement/refine models while considering functionality for recommendation output;
+
+Run regular A/B tests, capture data, perform statistical analysis, draw conclusions on the impact of your models 
+
+Proven understanding of machine learning algorithms (supervised, unsupervised) and model evaluation techniques.
+Ability to define and track and identify key product metrics.
+Excellent communication and teamwork skills.
+
+Review and choose the best and most appropriate annotated datasets for the best-supervised learning methods
+
+Use effective text representations to transform natural language into useful features
+
+Basic Qualifications:
+
+5 + years of proven experience delivering applied machine learning products, including taking a product through design, implementation, and to production
+
+5+ years of developing Machine Learning driven features with Python (including NumPy, SciPy, Pandas, TensorFlow, Pytorch)
+
+Other Qualifications:
+
+Strong programming skills in Python with proficiency in relevant libraries (pandas, scikit-learn, TensorFlow/PyTorch)
+
+Familiarity with data technologies (Hadoop, Spark)
+
+Knowledge of deep learning and NLP techniques
+
+Experience building Extract Transform Load (ETL) pipelines.
+
+Experience in designing and crafting experiments, A/B testing and data analysis in the domain of quality metrics for machine learning services
+
+Experience in analyzing the ML algorithms that could be used to solve a given problems and ranking them by their success probability
+
+B.A./B.S. in Computer Science, Statistics, Mathematics, or similar

@@ -196,7 +196,44 @@ The AI-Powered Job Application Assistant will simplify the job application proce
 Let me know if this is good to go or if you’d like any changes! 🎉😎
 
 
+# Running the Application
+1. Start Chainlit Interface
+```
+# Activate the virtual environment
+source job_assistant_env/bin/activate  # Mac/Linux
+# or
+job_assistant_env\Scripts\activate    # Windows
 
+# Run Chainlit
+chainlit run main.py
+```
+
+# Usage Instructions
+Open your browser and go to:
+
+```
+http://localhost:8000
+```
+
+Type:
+
+- resume:data/sample_resume.docx to upload your resume.
+
+- job_posting:data/sample_job_posting.txt to upload the job posting.
+
+- linkedin:https://www.linkedin.com/in/example to analyze a LinkedIn profile.
+
+Run commands like:
+
+- analyze_match to analyze job-resume match.
+
+- suggest_keywords for suggested resume keywords.
+
+- skill_insights for trending skills and roles.
+
+- interview_questions for sample interview questions.
+
+- company:<company_name> to fetch company insights.
 
 
 
