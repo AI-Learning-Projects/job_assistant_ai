@@ -9,6 +9,7 @@ from docx import Document
 from bs4 import BeautifulSoup
 # from config import OPENAI_API_KEY
 
+#get API token from system environment variable
 OPENAI_API_KEY = os.environ.get("OPEAI_API_KEY")
 
 # Initialize GPT-4o-mini with LangChain
