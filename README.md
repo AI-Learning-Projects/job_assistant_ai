@@ -190,6 +190,21 @@ Allow the system to auto-update the resume with suggested changes.
 AI-Powered Mock Interviews:
 Develop a mock interview feature that simulates real-life interview scenarios.
 
+Improve Prompt:
+
+Beautify feedback:
+
+Analyze LinkedIn Profile:
+
+Allow User to upload files instead of using files in git repo:
+
+Use environment variables for token:
+
+Fix Known Issues:
+1. duplicate input handling
+2. for out of scope feedback, use default model
+
+
 ## Conclusion
 The AI-Powered Job Application Assistant will simplify the job application process by leveraging AI to analyze resumes, job postings, and LinkedIn profiles while providing actionable insights and recommendations. With a seamless interactive interface using Chainlit, this project aims to help job seekers create compelling applications and prepare effectively for interviews.
 

@@ -7,7 +7,9 @@ import requests
 from langchain_openai import ChatOpenAI
 from docx import Document
 from bs4 import BeautifulSoup
-from config import OPENAI_API_KEY
+# from config import OPENAI_API_KEY
+
+OPENAI_API_KEY = os.environ.get("OPEAI_API_KEY")
 
 # Initialize GPT-4o-mini with LangChain
 llm = ChatOpenAI(api_key=OPENAI_API_KEY, model_name="gpt-4o-mini")
