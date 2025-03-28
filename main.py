@@ -94,7 +94,52 @@ def get_company_insights(company_name):
     """
     return llm(prompt)
 
+def get_default(user_input, resume_text="no input provided", job_posting="no input provided"):
+
+
+    prompt = f"""
+    User provided an input that our job assistant app does not handle.  Our job assistant app can handle input with resume and job posting and provide feedback
+    on user's resume according to the requirement in the job posting.  Please help with user input: "{user_input}"  This is user's resume "{resume_text}"
+    and the job position they are referencing is "{job_posting}"
+    """
+    return llm(prompt)
+
 # ---- Chainlit Event Handlers ----
+
+
+@cl.on_chat_start
+async def start():
+    job = None
+
+    # Wait for the user to upload a file
+    while job == None:
+        job = await cl.AskFileMessage(
+            content="Please upload a job posting file to begin!", accept=["text/plain"]
+        ).send()
+
+    text_file = job[0]
+
+    with open(text_file.path, "r", encoding="utf-8") as f:
+        job_posting = f.read()
+
+    cl.user_session.set("job_posting", job_posting)
+
+
+    resume = None
+
+    # Wait for the user to upload a file
+    while resume == None:
+        resume = await cl.AskFileMessage(
+            content="Please upload a resume file with .docx extension to begin!", accept=["application/vnd.openxmlformats-officedocument.wordprocessingml.document"]
+        ).send()
+
+    text_file = resume[0]
+    resume_text = parse_resume(text_file.path)
+
+    cl.user_session.set("resume_text", resume_text)
+
+
+
 
 @cl.on_message
 async def main(message):
@@ -131,7 +176,7 @@ async def main(message):
         job_posting = cl.user_session.get("job_posting")
         if resume_text and job_posting:
             result = analyze_job_match(resume_text, job_posting)
-            await cl.Message(f"📊 Match Analysis:\n{result}").send()
+            await cl.Message(f"📊 Match Analysis:\n{result.content}").send()
         else:
             await cl.Message("⚠️ Please upload both the resume and job posting before analyzing.").send()
     
@@ -139,7 +184,7 @@ async def main(message):
         job_posting = cl.user_session.get("job_posting")
         if job_posting:
             keywords = suggest_keywords(job_posting)
-            await cl.Message(f"🔑 Suggested Keywords:\n{keywords}").send()
+            await cl.Message(f"🔑 Suggested Keywords:\n{keywords.content}").send()
         else:
             await cl.Message("⚠️ Please upload the job posting before suggesting keywords.").send()
 
@@ -147,7 +192,7 @@ async def main(message):
         resume_text = cl.user_session.get("resume_text")
         if resume_text:
             insights = provide_skill_insights(resume_text)
-            await cl.Message(f"📈 Skill Insights:\n{insights}").send()
+            await cl.Message(f"📈 Skill Insights:\n{insights.content}").send()
         else:
             await cl.Message("⚠️ Please upload your resume before getting skill insights.").send()
     
@@ -156,14 +201,14 @@ async def main(message):
         job_posting = cl.user_session.get("job_posting")
         if resume_text and job_posting:
             questions = generate_interview_questions(resume_text, job_posting)
-            await cl.Message(f"🎙️ Sample Interview Questions:\n{questions}").send()
+            await cl.Message(f"🎙️ Sample Interview Questions:\n{questions.content}").send()
         else:
             await cl.Message("⚠️ Please upload both the resume and job posting before generating interview questions.").send()
 
     elif message.content.startswith("company:"):
         company_name = message.content.replace("company:", "").strip()
         insights = get_company_insights(company_name)
-        await cl.Message(f"🏢 Company Insights:\n{insights}").send()
+        await cl.Message(f"🏢 Company Insights:\n{insights.content}").send()
 
     elif message.content == "help":
         await cl.Message("""
@@ -180,4 +225,13 @@ async def main(message):
         """).send()
     
     else:
-        await cl.Message("⚠️ Unknown command. Type `help` to see available commands.").send()
+        await cl.Message("⚠️ No available command. Using default").send()
+
+        user_input = message.content.strip()
+        resume_text = cl.user_session.get("resume_text")
+        job_posting = cl.user_session.get("job_posting")
+        if resume_text or job_posting:
+            user_input_handler = get_default(user_input, resume_text, job_posting)
+        else:
+            user_input_handler = get_default(user_input)
+        await cl.Message(f"Here you go:\n{user_input_handler.content}").send()

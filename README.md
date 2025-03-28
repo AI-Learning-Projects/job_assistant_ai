@@ -192,16 +192,16 @@ Develop a mock interview feature that simulates real-life interview scenarios.
 
 Improve Prompt:
 
-Beautify feedback:
+~~Beautify feedback:~~
 
 Analyze LinkedIn Profile:
 
-Allow User to upload files instead of using files in git repo:
+~~Allow User to upload files instead of using files in git repo:~~
 
-Use environment variables for token:
+~~Use environment variables for token:~~
 
 Fix Known Issues:
-1. duplicate input handling
+~~1. duplicate input handling~~
 2. for out of scope feedback, use default model
 
 
