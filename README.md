@@ -202,7 +202,9 @@ Analyze LinkedIn Profile:
 
 Fix Known Issues:
 ~~1. duplicate input handling~~
-2. for out of scope feedback, use default model
+~~2. for out of scope feedback, use default model~~
+3. Convert steps into Router Chain from LangChain
+4. Provide links to job posting / linked n profile as resume for user input
 
 
 ## Conclusion
