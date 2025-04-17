@@ -1,27 +1,27 @@
-## Project Overview
+# Project Overview
 The AI-Powered Job Application Assistant is an intelligent, interactive chatbot designed to streamline the job application process by analyzing a candidate’s resume, desired job posting, and LinkedIn profile to provide tailored insights. The system will generate personalized responses, suggest relevant keywords, and provide interview preparation recommendations, helping job seekers optimize their applications and boost their chances of securing interviews.
 
-## Key Objectives
-# Resume and Job Match Analysis:
+# Key Objectives
+## Resume and Job Match Analysis:
 Analyze a user's resume and compare it with the job posting to calculate a match percentage, highlight missing skills, and suggest improvements.
 
-# Skill and Role Insights:
+## Skill and Role Insights:
 Provide insights on in-demand skills, emerging roles, and salary ranges relevant to the user’s experience.
 
-# Keyword Suggestions:
+## Keyword Suggestions:
 Extract and suggest high-impact, ATS-friendly (Applicant Tracking System) keywords to optimize the resume based on the job posting.
 
-# Company Insights:
+## Company Insights:
 Provide an overview of the company, including mission, values, recent news, and insights into work culture and environment.
 
-# Sample Interview Questions:
+## Sample Interview Questions:
 Generate a list of customized interview questions that align with the user's resume and the job requirements.
 
-# LinkedIn Profile Analysis:
+## LinkedIn Profile Analysis:
 Analyze a user's LinkedIn profile to extract additional skills, certifications, and work experience to enhance their resume and highlight any missing information.
 
-## Project Scope
-# Core Features
+# Project Scope
+## Core Features
 Upload and Parse Resume (DOCX Format):
 Extract and analyze content from the uploaded resume to identify key skills, experiences, and education.
 
@@ -46,8 +46,8 @@ Offer insights into the company's mission, values, and work culture to help user
 Interview Question Generation:
 Generate 5-7 relevant interview questions that combine technical and behavioral elements, customized to the user's resume and the job posting.
 
-## Technology Stack
-# Core Technologies
+# Technology Stack
+## Core Technologies
 Python 3.11+ – Backend programming.
 
 OpenAI GPT-4o-mini – For natural language understanding and content generation.
@@ -56,7 +56,7 @@ LangChain – To create custom prompt chains for document analysis.
 
 Chainlit – For building an interactive chatbot interface.
 
-# Libraries and APIs
+## Libraries and APIs
 openai – GPT-4o-mini API integration.
 
 langchain – To create modular AI chains for job analysis.
@@ -69,56 +69,56 @@ beautifulsoup4 – Web scraping (for LinkedIn profile parsing).
 
 requests – API requests for LinkedIn profile simulation.
 
-## Project Workflow
-# Phase 1: Setup and Configuration
+# Project Workflow
+## Phase 1: Setup and Configuration
 Configure environment and set up required dependencies.
 
 Establish Chainlit as the interactive interface.
 
-# Phase 2: Resume and Job Posting Analysis
+## Phase 2: Resume and Job Posting Analysis
 Parse and analyze resume content.
 
 Extract job posting details and identify required skills and qualifications.
 
 Calculate match percentage and suggest improvements.
 
-# Phase 3: Keyword and Skill Analysis
+## Phase 3: Keyword and Skill Analysis
 Identify ATS-optimized keywords for the resume.
 
 Generate skill insights and suggest emerging roles based on the user's experience.
 
-# Phase 4: LinkedIn Profile Analysis
+## Phase 4: LinkedIn Profile Analysis
 Extract data from the LinkedIn profile.
 
 Cross-check skills, certifications, and work experience to enhance the resume.
 
-# Phase 5: Company and Interview Preparation
+## Phase 5: Company and Interview Preparation
 Generate detailed company insights.
 
 Provide personalized interview questions aligned with the resume and job posting.
 
-# Phase 6: UI Development and Interactive Chat
+## Phase 6: UI Development and Interactive Chat
 Develop interactive commands using Chainlit.
 
 Create a seamless conversational flow for uploading, analyzing, and suggesting improvements.
 
-# Phase 7: Testing and Evaluation
+## Phase 7: Testing and Evaluation
 Perform functional and user acceptance testing.
 
 Fine-tune GPT-4o-mini prompts to optimize response quality.
 
-## User Interaction Flow
-# Step 1: Upload Documents
+# User Interaction Flow
+## Step 1: Upload Documents
 User uploads the resume (DOCX) and job posting (TXT).
 
 Optionally, provide a LinkedIn profile URL.
 
-# Step 2: Analysis and Suggestions
+## Step 2: Analysis and Suggestions
 System analyzes the resume and compares it to the job posting.
 
 LinkedIn profile insights are merged to enhance the analysis.
 
-# Step 3: Insights and Recommendations
+## Step 3: Insights and Recommendations
 System suggests keyword improvements and skill recommendations.
 
 Provides company insights and generates interview questions.
@@ -128,8 +128,8 @@ Users review recommendations and make necessary changes.
 
 Application optimized for better ATS performance.
 
-## Acceptance Criteria
-# Functional Requirements
+# Acceptance Criteria
+## Functional Requirements
 The system should successfully parse resumes and job postings.
 
 It should calculate a match percentage and highlight gaps between the resume and job description.
@@ -142,17 +142,17 @@ The system should generate relevant interview questions.
 
 It should provide company insights using available information.
 
-# Performance Requirements
+## Performance Requirements
 Response time for all analysis and insights should not exceed 5 seconds per request.
 
 LinkedIn profile analysis should be completed within 8 seconds.
 
-# Usability Requirements
+## Usability Requirements
 Chainlit interface should be intuitive and easy to navigate.
 
 Users should be able to upload files, paste URLs, and receive relevant feedback effortlessly.
 
-# Error Handling
+## Error Handling
 Provide user-friendly error messages for unsupported file formats.
 
 Handle API failures or incorrect LinkedIn URLs gracefully.
@@ -207,13 +207,13 @@ Fix Known Issues:
 4. Provide links to job posting / linked n profile as resume for user input
 
 
-## Conclusion
+# Conclusion
 The AI-Powered Job Application Assistant will simplify the job application process by leveraging AI to analyze resumes, job postings, and LinkedIn profiles while providing actionable insights and recommendations. With a seamless interactive interface using Chainlit, this project aims to help job seekers create compelling applications and prepare effectively for interviews.
 
 Let me know if this is good to go or if you’d like any changes! 🎉😎
 
 
-# Running the Application
+## Running the Application
 1. Start Chainlit Interface
 ```
 # Activate the virtual environment
@@ -225,7 +225,7 @@ job_assistant_env\Scripts\activate    # Windows
 chainlit run main.py
 ```
 
-# Usage Instructions
+## Usage Instructions
 Open your browser and go to:
 
 ```
