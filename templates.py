@@ -1,12 +1,17 @@
 from langchain.chains.router.multi_prompt import MULTI_PROMPT_ROUTER_TEMPLATE
 
 
-fetch_linkedin_profile = """Extract key data from LinkedIn profile
+fetch_linkedin_profile = """Stimulate an ATS (Application Tracking System) system to extract data from LinkedIn profile.
     For example it should return the following:
     - Name: Name of the person
     - Experience: Number of years in the field
     - Certifications: List of certifications
     - Skills: List of skills
+    - Education: Degree and institution
+    - Location: City and state
+    - Contact: Email and phone number (Optional, if found warn the user about privacy)
+    - Summary: A brief summary of the profile
+    and other ATS friendly data that can be extracted from LinkedIn profile.
 
     Here is the user input:
     {input}
@@ -31,6 +36,7 @@ extract_job_keywords = """
 
 provide_resume_insights = """
     Based on this resume, suggest:
+    - Any imporovements to be made in the resume.
     - 3 in-demand skills: skills that are relevant to the user's experience but not mentioned in the resume.
     - emerging roles: roles that the user might consider based on their experience.
     - salary ranges: give a list of salary ranges based on the emerging roles listed above 
@@ -48,7 +54,7 @@ generate_interview_questions = """
     """
 
 get_company_insights = """
-    Provide a summary of a company including:
+    Provide a summary of the company in the job posting including:
     - Mission and values
     - Recent news and trends
     - Insights on work culture and team environment
